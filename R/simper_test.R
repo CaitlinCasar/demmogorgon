@@ -8,5 +8,5 @@ simper_test <- function(data, metadata){
 # editing area ------------------------------------------------------------
 
 #return average between-group dissimilarity. This is the sum of the item average
-sim_test$D1_D2$overall
+#sim_test$D1_D2$overall
 #need to figure out how to iterate over comparisons and return overall
