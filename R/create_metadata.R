@@ -12,6 +12,7 @@ create_metadata <- function(data, date=TRUE){
   test_names <- as.vector(unlist(meta[1])[(!unlist(meta[1]) %in% rownames(data))])
   test_names <- which(unlist(meta) %in% test_names)
   meta <- meta[-test_names,]
+  meta <- meta[match(rownames(data), meta[,1]),]
   if(date==TRUE){
   meta$date <- paste0(lubridate::month(lubridate::mdy(meta$date), label = TRUE),".", lubridate::year(lubridate::mdy(meta$date)))
   meta
