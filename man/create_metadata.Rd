@@ -4,7 +4,7 @@
 \alias{create_metadata}
 \title{create metadata function}
 \usage{
-create_metadata(data, date = TRUE)
+create_metadata(data, date = TRUE, return_clean_data = FALSE)
 }
 \arguments{
 \item{date}{argument to format dates in your metadata, your csv file must have a column named "date", defaults to TRUE}

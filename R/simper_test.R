@@ -1,3 +1,11 @@
+#' simper test function
+#'
+#' This function...
+#' @param
+#' @keywords simper
+#' @export
+#' @examples
+#' examples...
 simper_test <- function(data, metadata, comparison_index=2, num_perm=1, p_threshold=1, sim_plot=TRUE, color_dict=NULL, phylum=FALSE){
   `%>%` <- magrittr::`%>%`
   simper_test_data <- vegan::simper(data, metadata[,comparison_index], permutations = num_perm)

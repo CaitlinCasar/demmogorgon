@@ -3,4 +3,6 @@
 export(create_color_dict)
 export(create_metadata)
 export(import_otu_table)
+export(plot_communities)
+export(simper_test)
 export(transform_data)

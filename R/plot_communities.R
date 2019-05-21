@@ -1,3 +1,11 @@
+#' plot communities function
+#'
+#' This function...
+#' @param
+#' @keywords plot
+#' @export
+#' @examples
+#' examples...
 plot_communities <- function(data, color_dict=NULL,metadata, NMDS=FALSE, barplot=FALSE, dendrogram=FALSE, dendro_bar=FALSE, interactive=FALSE, threshold_abundance=5, phylum=FALSE, legend=FALSE, perm_val=100){
   `%>%` <- magrittr::`%>%`
   dendrogram_data <- as.dendrogram(hclust(ecodist::bcdist(data)))
