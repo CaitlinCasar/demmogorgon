@@ -118,30 +118,30 @@ plot_communities <- function(data, color_dict=NULL,metadata, NMDS=FALSE, barplot
 # editing section ---------------------------------------------------------
 
 
-###this works###
-test = as.matrix(vegdist(data, method = "bray"))
-
-)
-
-# Bootstrapping with pvclust
-test = pvclust(test, method.hclust = "average", nboot = 1000)
-
-
-
-dend <- as.dendrogram(test)
-test %>% as.dendrogram %>%
-  plot(main = "Cluster dendrogram with AU/BP values (%)\n reproduced plot with dendrogram")
-test %>% text
-
-
-dend %>% pvclust_show_signif(test, show_type = "lwd") %>%
-  plot(main = "Cluster dendrogram with AU/BP values (%)\n bp values are highlighted by signif")
-test %>% text
-
-
-
-ggplot2::ggplot(dend %>% pvclust_show_signif(test, show_type = "lwd") ) +
-  geom_text(inherit.aes = FALSE, test_coords, aes(x=V1, y=height, label=au))
-
-ggplot2::ggplot(test_dend, horiz = T) +
-  geom_text(inherit.aes = FALSE, test_coords, aes(x=V1, y=height, label=au))
+# ###this works###
+# test = as.matrix(vegdist(data, method = "bray"))
+#
+# )
+#
+# # Bootstrapping with pvclust
+# test = pvclust(test, method.hclust = "average", nboot = 1000)
+#
+#
+#
+# dend <- as.dendrogram(test)
+# test %>% as.dendrogram %>%
+#   plot(main = "Cluster dendrogram with AU/BP values (%)\n reproduced plot with dendrogram")
+# test %>% text
+#
+#
+# dend %>% pvclust_show_signif(test, show_type = "lwd") %>%
+#   plot(main = "Cluster dendrogram with AU/BP values (%)\n bp values are highlighted by signif")
+# test %>% text
+#
+#
+#
+# ggplot2::ggplot(dend %>% pvclust_show_signif(test, show_type = "lwd") ) +
+#   geom_text(inherit.aes = FALSE, test_coords, aes(x=V1, y=height, label=au))
+#
+# ggplot2::ggplot(test_dend, horiz = T) +
+#   geom_text(inherit.aes = FALSE, test_coords, aes(x=V1, y=height, label=au))
